@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{theme.name}}
+{% endblock %}
+
+{% block content %}
+    <h1>{{theme.name}}:</h1>
+    <li>{{theme.plan}}</li>
+
+<p>
+    <a href="{% url 'edit_theme' theme.pk %}">Edit theme</a>
+    <a href="{% url 'delete_theme' theme.pk %}">Delete theme</a>
+</p>
+
+{% endblock %}

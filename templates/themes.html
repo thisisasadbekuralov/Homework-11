@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Themes page
+{% endblock %}
+
+{% block content %}
+    <h1>Themes:</h1>
+     <ul>
+         {% for theme in themes %}
+           <li>
+               <a href="{% url 'theme_detail' theme.id %}">{{theme.name}}</a>
+               <span class="badge badge-primary">{{theme.category_theme}}</span>
+           </li>
+
+         {% endfor %}
+     </ul>
+{% endblock %}
